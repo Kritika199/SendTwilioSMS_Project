@@ -1,27 +1,30 @@
 {
     "workflowApiVersion": "1.1",
     "metaData": {
-       "icon": "images/iconSmall.png",
-       "category": "message"
+        "icon": "images/iconSmall.png",
+        "category": "message"
     },
     "type": "REST",
     "lang": {
-       "en-US": {
-           "name": "Twilio SMS",
-           "description": "Send Twilio SMS with Journey Builder",
-           "TwilioMessage":"test"
-       }
+        "en-US": {
+            "name": "Twilio SMS",
+            "description": "Send Twilio SMS with Journey Builder",
+            "TwilioMessage": "test"
+        }
     },
     "arguments": {
         "execute": {
             "inArguments": [
                 {
-                  "email": "{{Contact.Default.EmailAddress}}",
-                  "to": "{{Contact.Attribute.TwilioV1.TwilioNumber}}" 
-                }               
+                    "subscriberKey": "{{Event.APIEvent-6c752d26-44f1-42cb-64d9-59df8173c1b6.SubscriberKey}}",
+                    "firstName": "{{Event.APIEvent-6c752d26-44f1-42cb-64d9-59df8173c1b6.FirstName}}",
+                    "twilioNumber": "{{Event.APIEvent-6c752d26-44f1-42cb-64d9-59df8173c1b6.TwilioNumber}}",
+                    "messageStatus": "{{Event.APIEvent-6c752d26-44f1-42cb-64d9-59df8173c1b6.MessageStatus}}",
+                    "emailAddress": "{{Event.APIEvent-6c752d26-44f1-42cb-64d9-59df8173c1b6.EmailAddress}}"
+                }
             ],
             "outArguments": [],
-            "url": "https://twilio-sfmc.herokuapp.com/journeybuilder/execute",
+            "url": "https://vercel.com/kritika199s-projects/twilio-sfmc-25/execute",
             "verb": "POST",
             "body": "",
             "format": "json",
@@ -30,91 +33,87 @@
         }
     },
     "configurationArguments": {
-      "applicationExtensionKey": "e962d1d4-8b07-4e76-89be-ecd1f1423b6d",
-       "save": {
-           "url": "https://twilio-sfmc.herokuapp.com/save",
+        "applicationExtensionKey": "64715fc4-688b-47f6-a4b8-b4e9204751bf",
+        "save": {
+            "url": "https://vercel.com/kritika199s-projects/twilio-sfmc-25/save",
             "verb": "POST",
             "body": "",
             "format": "json",
             "useJwt": false,
             "timeout": 2000
-       },
-       "publish": {
-           "url": "https://twilio-sfmc.herokuapp.com/publish",
+        },
+        "publish": {
+            "url": "https://vercel.com/kritika199s-projects/twilio-sfmc-25/publish",
             "verb": "POST",
             "body": "",
             "format": "json",
             "useJwt": false,
             "timeout": 2000
-       },
-       "validate": {
-           "url": "https://twilio-sfmc.herokuapp.com/validate",
+        },
+        "validate": {
+            "url": "https://vercel.com/kritika199s-projects/twilio-sfmc-25/validate",
             "verb": "POST",
             "body": "",
             "format": "json",
             "useJwt": false,
             "timeout": 2000
-       },
-       "stop": {
-           "url": "https://twilio-sfmc.herokuapp.com/stop",
+        },
+        "stop": {
+            "url": "https://vercel.com/kritika199s-projects/twilio-sfmc-25/stop",
             "verb": "POST",
             "body": "",
             "format": "json",
             "useJwt": false,
             "timeout": 2000
-       }
+        }
     },
     "wizardSteps": [
-       { "label": "Create SMS Message", "key": "step1" }
+        {
+            "label": "Create SMS Message",
+            "key": "step1"
+        }
     ],
     "userInterfaces": {
-       "configModal": {
-           "height": 600,
-           "width": 800,
-           "fullscreen": false
-       }
+        "configModal": {
+            "height": 600,
+            "width": 800,
+            "fullscreen": false
+        }
     },
     "schema": {
         "arguments": {
             "execute": {
                 "inArguments": [
                     {
-                        "accountSid": {
+                        "subscriberKey": {
                             "dataType": "String",
                             "isNullable": false,
-                            "direction": "out"   
-                        }
-                    },                    
-                    {
-                        "authToken": {
-                            "dataType": "String",
-                            "isNullable": false,
-                            "direction": "out"   
-                        }
-                    },                    
-                    {
-                        "from": {
-                            "dataType": "Phone",
-                            "isNullable": true,
-                            "direction": "out"   
-                        }
-                    },                    
-                    {
-                        "to": {
-                            "dataType": "Phone",
-                            "isNullable": false,
-                            "direction": "out"   
+                            "direction": "out"
                         }
                     },
                     {
-                        "body": {
+                        "firstName": {
                             "dataType": "String",
-                            "isNullable": false,
-                            "direction": "out"   
+                            "isNullable": true,
+                            "direction": "out"
                         }
-                    },                    
+                    },
                     {
-                        "email": {
+                        "twilioNumber": {
+                            "dataType": "Phone",
+                            "isNullable": true,
+                            "direction": "out"
+                        }
+                    },
+                    {
+                        "messageStatus": {
+                            "dataType": "String",
+                            "isNullable": true,
+                            "direction": "out"
+                        }
+                    },
+                    {
+                        "emailAddress": {
                             "dataType": "Email",
                             "isNullable": true,
                             "direction": "out"
