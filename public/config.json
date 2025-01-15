@@ -24,7 +24,7 @@
                 }
             ],
             "outArguments": [],
-            "url": "https://send-twilio-sms-project.vercel.app/execute",
+            "url": "https://send-twilio-sms-project.vercel.app/journeybuilder/execute",
             "verb": "POST",
             "body": "",
             "format": "json",
