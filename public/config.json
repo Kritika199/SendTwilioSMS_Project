@@ -24,7 +24,7 @@
                 }
             ],
             "outArguments": [],
-            "url": "https://vercel.com/kritika199s-projects/twilio-sfmc-25/execute",
+            "url": "https://send-twilio-sms-project.vercel.app/execute",
             "verb": "POST",
             "body": "",
             "format": "json",
@@ -35,7 +35,7 @@
     "configurationArguments": {
         "applicationExtensionKey": "64715fc4-688b-47f6-a4b8-b4e9204751bf",
         "save": {
-            "url": "https://vercel.com/kritika199s-projects/twilio-sfmc-25/save",
+            "url": "https://send-twilio-sms-project.vercel.app/save",
             "verb": "POST",
             "body": "",
             "format": "json",
@@ -43,7 +43,7 @@
             "timeout": 2000
         },
         "publish": {
-            "url": "https://vercel.com/kritika199s-projects/twilio-sfmc-25/publish",
+            "url": "https://send-twilio-sms-project.vercel.app/publish",
             "verb": "POST",
             "body": "",
             "format": "json",
@@ -51,7 +51,7 @@
             "timeout": 2000
         },
         "validate": {
-            "url": "https://vercel.com/kritika199s-projects/twilio-sfmc-25/validate",
+            "url": "https://send-twilio-sms-project.vercel.app/validate",
             "verb": "POST",
             "body": "",
             "format": "json",
@@ -59,7 +59,7 @@
             "timeout": 2000
         },
         "stop": {
-            "url": "https://vercel.com/kritika199s-projects/twilio-sfmc-25/stop",
+            "url": "https://send-twilio-sms-project.vercel.app/stop",
             "verb": "POST",
             "body": "",
             "format": "json",
