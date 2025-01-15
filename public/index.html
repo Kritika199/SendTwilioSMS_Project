@@ -30,18 +30,20 @@
         #step1 {
             display: block;
         }
+        #step2 {
+            display: block;
+        }
     </style>
 
 </head>
 <body>
+
+    
 <div id="step1" class="step">
     <h2>Create a Twilio SMS message:</h2>
     <p>Twilio's Programmable SMS has the features you’ll need to build quickly and scale to production. We’ve solved the hard problems so you don’t have to.  <a href="https://www.twilio.com/sms" target="_blank">Learn more about about Twilio SMS here</a>.</p>
     <hr>
-    <div class="form-group">
-        <div><label for="messageBody">Create message body:</label></div>
-        <input class="form-control" id="messageBody" type="text" name="messageBody" value="">        
-    </div>           
+              
     <div class="form-group">
         <div><label for="messagingService">Messaging Service SID:</label></div>
         <input class="form-control" id="messagingService" type="text" name="messagingService" value="">
@@ -56,5 +58,27 @@
     </div>    
 
 </div>
+
+    
+
+
+    
+   <div>
+  <h3>Select a Field</h3>
+  <select class="slds-select" id="idField" style="width: 300px; height: 40px;">
+    <!-- Options will be populated dynamically -->
+  </select>
+</div>
+
+
+
+    <div class="form-group">
+        <div><label for="messageBody">Message Body:</label></div>
+        <textarea class="form-control" id="messageBody" name="messageBody" rows="4"></textarea>
+    </div>           
+
+    
+
+
 </body>
 </html>
