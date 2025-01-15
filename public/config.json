@@ -28,7 +28,7 @@
             "verb": "POST",
             "body": "",
             "format": "json",
-            "useJwt": false,
+            "useJwt": true,
             "timeout": 2000
         }
     },
@@ -55,7 +55,7 @@
             "verb": "POST",
             "body": "",
             "format": "json",
-            "useJwt": false,
+            "useJwt": true,
             "timeout": 2000
         },
         "stop": {
